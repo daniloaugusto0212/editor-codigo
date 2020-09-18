@@ -1,0 +1,37 @@
+/*Palheta
+#000000
+#484848
+#E8E9D2
+#F4F4E8
+
+*/
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.lista-arquivo-single{
+    background: #E8E9D2;
+    padding: 10px;
+    border-bottom: 3px solid #F4F4E8;
+    color: #484848;
+    cursor: pointer;
+}
+
+.lista-arquivo-single:hover{
+    background: #F4F4E8;
+}
+
+textarea{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #484848;
+}
+
+button{
+    padding: 5px 10px;
+    background: #CE593A;
+    color: white;
+}
