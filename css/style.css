@@ -26,12 +26,14 @@
 
 textarea{
     width: 500px;
-    height: 500px;
+    height: 300px;
     border: 1px solid #484848;
+    padding: 10px 20px;
 }
 
-button{
+input{
     padding: 5px 10px;
     background: #CE593A;
     color: white;
+    cursor: pointer;
 }

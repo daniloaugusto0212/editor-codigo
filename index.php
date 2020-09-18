@@ -1,3 +1,12 @@
+<?php
+    if (isset($_POST['acao'])) {
+        $texto = $_POST['texto'];
+        $arquivo = $_POST['arquivo'];
+        file_put_contents($arquivo,$texto);
+        echo '<script>alert("Salvo com sucesso!")</script>';
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -38,9 +47,12 @@
     if (isset($_GET['file']) && file_exists('files/'.$_GET['file'])) {
 ?>
     <h2><?= 'Editando o arquivo: '.$_GET['file'] ?></h2>
-    <textarea><?= file_get_contents('files/'.$_GET['file']) ?></textarea>
-    <br>
-    <button>Salvar</button>
+    <form action="" method="post">
+        <textarea name="texto"><?= file_get_contents('files/'.$_GET['file']) ?></textarea>
+        <br>
+        <input type="hidden" name="arquivo" value="<?= ('files/'.$_GET['file']) ?>">
+        <input type="submit" name="acao" value="Salvar!">
+    </form>
     <?php } ?>
     
 </body>
